@@ -7,7 +7,6 @@ export const DepartmentDetails = () => {
 	const [employees, setEmployees] = useState<Employee[]|undefined>()
 	const urlPath = window.location.pathname.split('/');
 	const departmentIdFromUrl = urlPath[2];
-	let employeeBlock: JSX.Element
 
 	useEffect(() => {
 		(async () => {
