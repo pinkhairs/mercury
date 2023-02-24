@@ -21,9 +21,9 @@ For the entire process, please document any changes you made and *why* you made 
 
 
 ### Features
-- [ ] Add an endpoint for `/departments/:id` which returns just the employees for that department
-- [ ] Add a test for your new endpoint
+- [X] Add an endpoint for `/department/:id` which returns just the employees for that department
+- [X] Add a test for your new endpoint
 
 ### Optional (Bugs)
 - [ ] Fix failing tests
-- [ ] Ensure data correctness
+- [X] Ensure data correctness

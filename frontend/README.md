@@ -24,10 +24,10 @@ For the entire process, please document any changes you made and *why* you made 
 
 
 ### Features
-- [ ] Add a page for the new departments endpoint that list details about that department including employees
+- [X] Add a page for the new departments endpoint that list details about that department including employees
 
 ### Optional (Bugs|Enhancements)
-- [ ] The departments list doesn't seem to load
-- [ ] The UI is a little ugly, see if you can make it pretty (show off your css skills)
+- [X] The departments list doesn't seem to load
+- [X] The UI is a little ugly, see if you can make it pretty (show off your css skills)
 
 
