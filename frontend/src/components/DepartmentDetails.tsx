@@ -3,7 +3,7 @@ import { Department } from "../models/Models"
 import api from "../utils/api"
 
 export const DepartmentDetails = () => {
-	const [department, setDepartment] = useState<Department[]|undefined>()
+	const [department, setDepartment] = useState<Department|undefined>()
 	const urlPath = window.location.pathname.split('/');
 	const departmentIdFromUrl = urlPath[2];
 
@@ -23,9 +23,6 @@ export const DepartmentDetails = () => {
 
 	if (!department) {
 		return <p>Loading Department...</p>
-	}
-	else if (department.length === 0) {
-		return <p>Not a valid department</p>
 	}
 
   	return (

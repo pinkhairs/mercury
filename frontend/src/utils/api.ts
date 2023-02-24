@@ -5,7 +5,7 @@ import { HTTPMethod, Service, Request, request } from './_abstract'
 const Requests = {
     // Fixed typo in URL adding S to end of department
     departments: new Request<Department[]>(HTTPMethod.get, "v1/departments"),
-    department: new Request<Department[]>(HTTPMethod.get, "v1/department"),
+    department: new Request<Department>(HTTPMethod.get, "v1/department"),
     employees: new Request<Employee[]>(HTTPMethod.get, 'v1/employees')
 }
 
@@ -20,7 +20,7 @@ class Backend implements Service {
         return request(this, Requests.departments).call()
     }
 
-    async showDepartment(id: string): Promise<Department[]> {
+    async showDepartment(id: string): Promise<Department> {
         Requests.department.path += '/'+id
         return request(this, Requests.department).call()
     }
