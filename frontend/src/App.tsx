@@ -23,7 +23,7 @@ export class App extends React.Component<AppProps, AppState> {
     return (
       <Router>
         <header>
-          <img src={Logo} />
+          <img alt="Mercury Intermedia" src={Logo} />
           <h1>Employee Directory</h1>
           <ul>
             <li>
