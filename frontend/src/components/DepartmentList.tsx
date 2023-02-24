@@ -32,7 +32,7 @@ export const DepartmentList = () => {
 		<h2>Department List</h2>
 		
 		<ul>
-			{departments.map(d => <li>{d.name}</li>)}
+			{departments.map(d => <li><a href={'/department/'+d.id}>{d.name}</a></li>)}
 		</ul>
 		</>
 	)
