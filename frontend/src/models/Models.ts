@@ -10,5 +10,5 @@ export interface Employee {
 export interface Department {
 	id: string;
 	name: string;
-	employeeIds: string[];
+	employees: object[];
 }
