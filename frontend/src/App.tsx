@@ -6,6 +6,7 @@ import { EmployeeList } from "./components/EmployeeList";
 import { EmployeeDetail } from "./components/EmployeeDetail";
 import { DepartmentList } from "./components/DepartmentList";
 import { DepartmentDetails } from "./components/DepartmentDetails";
+import Logo from "./assets/logo.svg";
 
 type AppProps = {};
 type AppState = {
@@ -22,6 +23,7 @@ export class App extends React.Component<AppProps, AppState> {
     return (
       <Router>
         <header>
+          <img src={Logo} />
           <h1>Employee Directory</h1>
           <ul>
             <li>
