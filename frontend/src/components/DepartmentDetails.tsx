@@ -30,7 +30,7 @@ export const DepartmentDetails = () => {
 
   	return (
 		<>
-			<p class="label">Department Details</p>
+			<p className="label">Department Details</p>
 			<h2>{department.name}</h2>
 			<h3>Employees</h3>
 			<ul>
