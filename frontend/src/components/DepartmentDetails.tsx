@@ -18,11 +18,11 @@ export const DepartmentDetails = () => {
 			}
 		})()
 
-	}, [])
+	}, [departmentIdFromUrl])
 
 	useEffect(() => {
 		setEmployees(department?.employees as Employee[])
-	})
+	}, [department?.employees])
 
 	if (!department) {
 		return <p>Loading Department...</p>
