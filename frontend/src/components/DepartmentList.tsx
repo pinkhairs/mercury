@@ -27,6 +27,7 @@ export const DepartmentList = () => {
 		return <p>No departments</p>
 	}
 
+	// added link to department detail page
   	return (
 		  <>
 		<h2>Department List</h2>

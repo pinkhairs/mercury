@@ -1,3 +1,4 @@
+// Changed some data types (some IDs and one date, Juan's) to match Models.ts
 const employees = [
     {
         id: "82837",
@@ -30,7 +31,7 @@ const employees = [
     {
         id: "zc",
         name: "Juan Cortez",
-        birthday: '1984-09-22',
+        birthday: new Date("1984-09-22"),
         bio: "Juan's been programming computers since the days of ATARI BASIC.",
         departmentId: "4"
     }
