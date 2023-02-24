@@ -1,5 +1,13 @@
+export interface Employee {
+	id: string;
+	name: string;
+	birthday: Date;
+	bio: string;
+	departmentId: string
+}
+
 // Changed some data types (some IDs and one date, Juan's) to match Models.ts
-const employees = [
+const employees: Employee[] = [
     {
         id: "82837",
         name: "Bob Smith",

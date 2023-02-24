@@ -1,14 +1,15 @@
 import { useEffect, useState } from "react"
-import { Department } from "../models/Models"
+import { Department, Employee } from "../models/Models"
 import api from "../utils/api"
 
 export const DepartmentDetails = () => {
 	const [department, setDepartment] = useState<Department|undefined>()
+	const [employees, setEmployees] = useState<Employee[]|undefined>()
 	const urlPath = window.location.pathname.split('/');
 	const departmentIdFromUrl = urlPath[2];
+	let employeeBlock: JSX.Element
 
 	useEffect(() => {
-
 		(async () => {
 			try {
 				setDepartment(await api.showDepartment(departmentIdFromUrl))
@@ -20,6 +21,9 @@ export const DepartmentDetails = () => {
 
 	}, [])
 
+	useEffect(() => {
+		setEmployees(department?.employees as Employee[])
+	})
 
 	if (!department) {
 		return <p>Loading Department...</p>
@@ -31,8 +35,8 @@ export const DepartmentDetails = () => {
 			<h2>{department.name}</h2>
 			<h3>Employees</h3>
 			<ul>
-				{department.employees.map((employee) => {
-					return <li>{employee.name}</li>
+				{employees?.map((employee: Employee) => {
+					return <li key={employee.id}>{employee.name}</li>
 				})}
 			</ul>
 		</>
