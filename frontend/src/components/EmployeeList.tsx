@@ -23,10 +23,10 @@ export class EmployeeList extends React.Component<
     return (
 			<div className="employee_list_page">
 			<h2>Employee List</h2>
+			{ !this.state.allEmployees && (
+				<p>Fetching employees</p>
+			)}
 			<ul>
-				{ !this.state.allEmployees && (
-					<p>Fetching employees</p>
-				)}
 				{this.state.allEmployees?.map((employee)=> <EmployeeDetail key={employee.id} employee={employee}/>)}
 			</ul>
 			</div>
@@ -41,7 +41,7 @@ type EmployeeDetailProps = {
 const EmployeeDetail = ({ employee }: EmployeeDetailProps) => {
 	return (
 		<li className="employee_detail">
-			<h3>{employee.name}</h3>
+			{employee.name}
 		</li>
 	)
 }
