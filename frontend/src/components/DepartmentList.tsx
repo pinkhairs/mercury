@@ -3,7 +3,7 @@ import { Department } from "../models/Models"
 import api from "../utils/api"
 
 export const DepartmentList = () => {
-	const [departments, setDepartments] = useState<Department|undefined>()
+	const [departments, setDepartments] = useState<Department[]|undefined>()
 
 
 	useEffect(() => {
